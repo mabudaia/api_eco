@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
@@ -25,7 +24,7 @@ Route::middleware('auth:sanctum')->group(function(){
 
 Route::post('logout',[UserController::class,'logout']);
 Route::apiResource('products', ProductController::class);
-Route::get('getAllProuduct', [ProductController::class,'getAllProuduct']);
+Route::get('getAllProduct', [ProductController::class,'getAllProduct']);
 Route::get('show', [ProductController::class,'show']);
 Route::apiResource('orders', OrderController::class);
 Route::post('/products/{product}/discount', [ProductController::class, 'applyDiscount']);
